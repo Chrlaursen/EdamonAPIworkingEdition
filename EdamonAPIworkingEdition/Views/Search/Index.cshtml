@@ -1,0 +1,30 @@
+﻿@model EdamonAPIworkingEdition.Models.Rootobject
+
+
+<div id="flex-recipes" class="container recipe-fit">
+
+
+    @foreach (var item in Model.hits)
+    {
+
+
+        <div class="recipe-inner">
+            <div class="recipe-img img-responsive">
+                <img src="@Html.DisplayFor(modelItem => item.recipe.image)" style="width: 100%; height: auto" />
+            </div>
+            <div class="recipe-label">
+                <h6>
+                    @Html.DisplayFor(modelItem => item.recipe.label)
+                </h6>
+            </div>
+
+
+        </div>
+
+
+    }
+
+
+</div>
+
+
